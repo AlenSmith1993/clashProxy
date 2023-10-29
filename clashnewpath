@@ -1,0 +1,13 @@
+parsers:
+  - url: https://api.dler.io/sub?target=clash&url=https%3A%2F%2Finstall.sdconfig.pro%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Da2921a7a61b5ba043e67809fcd2bf043&emoji=true&list=false&udp=false&tfo=false&scv=false&fdn=false&sort=false&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FAlenSmith1993%2FclashProxy%2FAlenSmith1993-patch-1%2Fclash_configuration_file.ini&emoji=true&list=false&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    yaml:
+      append-proxies:
+           - {name: "Google 美国1", type: trojan, server: www.alenapple.top, port: 17646, password: Lpx0DV06hG, flow: xtls-rprx-direct}# AKA SNI # xtls-rprx-origin  # enable XTLS # skip-cert-verify: true
+      prepend-proxy-groups:
+         - name: Google 美国
+           type: url-test
+           url: http://www.gstatic.com/generate_204
+           interval: 300
+           tolerance: 50
+           proxies:
+           - Google 美国1    # udp: true # sni: example.com # 填写伪装域名 #vless://6d10c40b-7728-4ded-bc4e-bf9f508b7815@www.alenapple.top:30222?type=tcp&security=xtls&flow=xtls-rprx-direct#vr
